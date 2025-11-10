@@ -796,3 +796,121 @@ body {
 }
 
 /* ---------------------------------------------------- */
+/* --- Enhanced styling for research abstract bullet points --- */
+.abstract-content ul {
+    list-style: none;                 /* Remove default browser bullets */
+    padding-left: 0;                  /* Align neatly with text */
+    margin: 15px 0;                   /* Add vertical breathing room */
+}
+
+.abstract-content li {
+    position: relative;               /* For custom bullet icons */
+    padding-left: 28px;               /* Space for the icon */
+    margin-bottom: 10px;              /* Space between bullets */
+    color: #c0c0c0;                   /* Consistent with abstract text color */
+    line-height: 1.6;                 /* Improve readability */
+    text-align: justify;
+}
+
+.abstract-content li::before {
+    content: "\f00c";                 /* Font Awesome check icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);      /* Use site’s accent color */
+    font-size: 0.9em;
+}
+
+/* Optional: small screen readability improvements */
+@media (max-width: 768px) {
+    .abstract-content li {
+        font-size: 0.95em;
+        padding-left: 25px;
+        margin-bottom: 8px;
+    }
+}
+
+/* --- Sub-link beside section titles --- */
+.section-sub-link {
+    font-size: 0.7em;                     /* Smaller, secondary look */
+    color: var(--secondary-color);
+    margin-left: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+}
+
+.section-sub-link:hover {
+    color: var(--primary-color);
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.my-video {
+    width: 700px;
+    height: 506px; /* A 16:9 aspect ratio */
+}
+
+
+/*
+ * New CSS Style for Secondary Links (Media Coverage, Project Teaser)
+ * Makes them look like a compact, purple button without the heavy padding of the primary CV button.
+ */
+.media-link-button {
+    display: inline-flex; /* Use inline-flex to keep it compact and align icon/text */
+    align-items: center;
+    background-color: var(--secondary-color); /* Use the purple color */
+    color: white !important; /* Text color is white */
+    padding: 6px 12px; /* Reduced padding for a smaller button */
+    margin-top: 15px; /* Add some spacing above the links */
+    margin-right: 15px; /* Spacing between multiple buttons */
+    border-radius: 8px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+.media-link-button i {
+    margin-left: 8px; /* Space between text and icon */
+    font-size: 0.9rem;
+}
+
+.media-link-button:hover {
+    background-color: #5534A7; /* Slightly darker purple on hover */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for anchor tags (links) specifically within the publication author list */
+.publication-author a {
+    color: white !important; /* Forces the link text color to match the surrounding white text */
+    text-decoration: none; /* Removes the default link underline */
+    font-weight: 500; 
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+/* Hover effect: makes the link clickable and visible upon mouse interaction */
+.publication-author a:hover {
+    color: var(--secondary-color) !important; /* Changes text to the accent color (purple) on hover */
+    text-decoration: underline; /* Adds the underline only when hovered */
+}
+
+/* Wrapper to center the video and provide spacing */
+.video-wrapper {
+    display: flex;        /* Activates flexbox layout */
+    justify-content: center; /* Centers items horizontally */
+    margin: 20px auto;     /* Adds vertical space */
+    padding: 0 10px;       /* Small padding to prevent the video from touching the screen edges on mobile */
+}
+
+/* Ensures the iframe is responsive and visually appealing */
+.video-wrapper iframe {
+    max-width: 100%;       /* Video will shrink on small screens */
+    border-radius: 8px;    /* Adds rounded corners to the video player */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+}

@@ -913,4 +913,19 @@ body {
     max-width: 100%;       /* Video will shrink on small screens */
     border-radius: 8px;    /* Adds rounded corners to the video player */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+
+}
+
+.doi-link a {
+    /* Ensure color is white, overriding any inherited blue link color */
+    color: white !important; 
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.doi-link a:hover {
+    /* Apply the accent color on hover */
+    color: var(--secondary-color) !important; 
+    text-decoration: underline;
 }
